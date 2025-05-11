@@ -1,0 +1,47 @@
+* {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bg-customcolor-orange {
+  background-color: #FF8400; /* Cor laranja personalizada */
+}
+
+.custom-description-text {
+    line-height: 2;
+    white-space: pre-wrap;
+}
+
+.custom-section-description {
+    width: 100%;
+    display: inline-flex;
+    max-width: 396px;
+}
+
+.custom-main-description {
+    width: 100%;
+    padding: 40px 10px 40px 0px;
+    text-align: left; display: inline;
+}
+
+.custom-span-description {
+    font-family: 'Nunito Sans', sans-serif; 
+    font-size: 18px;
+}
+
+.custom-p-line {
+    line-height: 2;
+}	
+
+.custom-text-button {
+    font-size: 16px;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}	
+
+.custom-bg-gray {
+    background-color: #3D3A36;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;900&display=swap');
