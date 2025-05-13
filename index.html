@@ -5,13 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protocolo 4EVER</title>
+
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R962ZFYN6V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        function redirect() {
+            window.open("https://pay.hotmart.com/C98412870M?checkoutMode=10&_hi=eyJzaWQiOiI2OWRkNGE2ZTg3Yzg0ZjhiYWE4ZjExMmMyZDkzMDlhYiJ9.1747093512529&bid=1747093513893");
+        }
+
+        document.querySelectorAll('#read-more').forEach(function (botao) {
+            botao.addEventListener('click', function () {
+                gtag('event', 'event_hotmart', {
+                    event_category: 'Saiba mais',
+                    event_label: 'Saiba mais',
+                });
+            });
+        });
+
+        gtag('js', new Date());
+        gtag('config', 'G-R962ZFYN6V', { debug_mode: true });
+    </script>
 </head>
 
 <body class="bg-black font-montserrat">
-    <section class="custom-background-image"
-        style="height: 850px; background: url('assets/images/background/background-primeira-section.webp') center/cover;">
+    <section class="custom-background-image h-[900px] justify-center items-center p-8"
+        style="background: url('assets/images/background/background-primeira-section.webp') center/cover;">
         <main class="max-w-7xl mx-auto px-4 py-8">
             <img src="assets/images/logo/logo.webp" alt="Descrição da Imagem" class="mb-4 mt-11">
             <div class="mt-12">
@@ -29,14 +55,16 @@
                     </span>
                 </span>
             </div>
-            <button class="bg-customcolor-orange text-white w-[250px] py-5 rounded-lg font-bold">SAIBA MAIS</button>
+            <button id="read-more" onclick="redirect()"
+                class="bg-customcolor-orange text-white w-[250px] py-5 rounded-lg font-bold">SAIBA MAIS</button>
         </main>
     </section>
     <section style="background: url('assets/images/background/background-segunda-section.webp') center/cover;">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row mt-16">
             <div class="w-full lg:w-1/2 flex items-start mb-4 lg:mb-0">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/UXMQS7OPJD4?si=0TRgUHTPziftk4hd"
-                    title="YouTube video player" frameborder="0"
+                <iframe class="px-6" width="560" height="315"
+                    src="https://www.youtube.com/embed/UXMQS7OPJD4?si=0TRgUHTPziftk4hd" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -62,8 +90,10 @@
                     <span>um corpo incrível, com a mistura perfeita de estética, </span><br>
                     <span>saúde e performance.</span><br>
                 </p>
-                <button class="bg-customcolor-orange mt-5 mb-20 w-[250px] text-white px-[2rem] py-5 rounded-lg font-bold">SAIBA MAIS</button>
-               
+                <button id="read-more" onclick="redirect()"
+                    class="bg-customcolor-orange mt-5 mb-20 w-[250px] text-white px-[2rem] py-5 rounded-lg font-bold">SAIBA
+                    MAIS</button>
+
             </div>
         </div>
     </section>
@@ -115,11 +145,13 @@
                     </p>
                 </div>
             </div>
-            <button class="bg-customcolor-orange mt-14 text-white w-[250px] px-[3rem] py-5 rounded-lg font-bold">SAIBA
+            <button id="read-more" onclick="redirect()"
+                class="bg-customcolor-orange mt-14 text-white w-[250px] px-[3rem] py-5 rounded-lg font-bold">SAIBA
                 MAIS</button>
         </div>
     </section>
-    <section style="background: url('assets/images/background/background-terceira-section.webp') center/cover;">
+    <section class="p-6"
+        style="background: url('assets/images/background/background-terceira-section.webp') center/cover;">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row">
             <div class="pl-8 text-white flex flex-col justify-center w-full lg:w-1/2 mt-36">
                 <h2 class="text-3xl font-bold">Por que o Protocolo 4EVER</h2>
@@ -136,7 +168,7 @@
                     <span>é um método baseado em ciência e aplicável ao seu</span><br>
                     <span>dia a dia – seja você iniciante ou avançado.</span><br>
                 </p>
-                <button
+                <button id="read-more" onclick="redirect()"
                     class="bg-customcolor-orange mt-5 mb-20 w-[250px] text-white px-[2rem] py-5 rounded-lg font-bold">SAIBA
                     MAIS</button>
             </div>
@@ -174,12 +206,13 @@
 
                 </div>
             </div>
-            <button class="bg-customcolor-orange mt-14 text-white w-[250px] px-[3rem] py-5 rounded-lg font-bold">SAIBA
+            <button id="read-more" onclick="redirect()"
+                class="bg-customcolor-orange mt-14 text-white w-[250px] px-[3rem] py-5 rounded-lg font-bold">SAIBA
                 MAIS</button>
         </div>
     </section>
     <section>
-        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row mt-16 mb-48" style="font-size: 16px;">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row mt-16 mb-18" style="font-size: 16px;">
             <img src="assets/images/pictures/profile.webp" alt="profile" class="ml-14 mr-14">
             <div class="pl-8 text-white flex flex-col justify-center w-full lg:w-1/2">
                 <div class="mt-10">
@@ -201,8 +234,9 @@
                     <span>Sua missão é ajudar você a construir o corpo e a</span><br>
                     <span>mente que sempre desejou</span><br>
                 </p>
-                <button
-                    class="bg-customcolor-orange mt-5 mb-20 w-[250px] text-white px-[3rem] py-5 rounded-lg font-bold">SAIBA MAIS</button>
+                <button id="read-more" onclick="redirect()"
+                    class="bg-customcolor-orange mt-5 mb-20 w-[250px] text-white px-[3rem] py-5 rounded-lg font-bold">SAIBA
+                    MAIS</button>
             </div>
         </div>
     </section>
@@ -221,17 +255,18 @@
                 <p class="leading-[3.5]"> - Bônus exclusivo: Lives mensais com Bianca Mesquita para dúvidas e
                     atualizações.</p>
             </div>
-            <button class="bg-customcolor-orange mt-14 mb-14 w-[250px] text-white px-[3rem] py-5 rounded-lg font-bold">SAIBA
+            <button id="read-more" onclick="redirect()"
+                class="bg-customcolor-orange mt-14 mb-14 w-[250px] text-white px-[3rem] py-5 rounded-lg font-bold">SAIBA
                 MAIS</button>
         </main>
     </section>
     <section class="bg-[#545454] py-16">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-white text-3xl md:text-3xl font-bold mb-10 text-center">
+            <h2 class="text-white  mt-14 text-3xl md:text-3xl font-bold mb-10 text-center">
                 Como está quem já aplicou o método Protocolo 4Ever?
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+                <div id="cards" class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
                     <img src="assets/images/pictures/feedback1.webp" alt="David" class="w-20 h-20 rounded-full mb-4" />
                     <p class="text-gray-600 italic mb-4">
                         "Nunca imaginei alcançar esses resultados tão rapidamente. Bianca mudou completamente minha
@@ -239,7 +274,7 @@
                     </p>
                     <p class="text-orange-500 font-semibold"> – David, Analista de Negócios</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+                <div id="cards" class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
                     <img src="assets/images/pictures/feedback2.webp" alt="Mariana"
                         class="w-20 h-20 rounded-full mb-4" />
                     <p class="text-gray-600 italic mb-4">
@@ -248,7 +283,7 @@
                     </p>
                     <p class="text-orange-500 font-semibold"> – Mariana, Arquiteta</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
+                <div id="cards" class="bg-white rounded-lg shadow-md p-6 flex flex-col items-start">
                     <img src="assets/images/pictures/feedback3.webp" alt="Rafaela"
                         class="w-20 h-20 rounded-full mb-4" />
                     <p class="text-gray-600 italic mb-4">
@@ -259,12 +294,13 @@
                 </div>
             </div>
             <div class="flex justify-center">
-                <button class="bg-customcolor-orange mt-14 text-white w-[250px] px-[3rem] py-5 rounded-lg font-bold">SAIBA
+                <button id="read-more" onclick="redirect()"
+                    class="bg-customcolor-orange mt-14 text-white w-[250px] px-[3rem] py-5 rounded-lg font-bold">SAIBA
                     MAIS</button>
             </div>
         </div>
     </section>
-    <section class="bg-black text-center py-16">
+    <section class="bg-black text-center py-16 p-6">
         <div class="max-w-1xl mx-auto">
             <img src="assets/images/logo/logo2.webp" alt="profile" width="400" height="400" class="mx-auto mb-8 mt-4">
             <h3 class="text-white text-4xl md:text-3xl font-bold mb-14">Ano passado você falou “ano que vem eu começo”
@@ -274,11 +310,12 @@
                     Protocolo 4EVER, o método que entrega resultados reais e</span><br>
                 <span>transforma vidas para sempre.</span>
             </p>
-            <button class="bg-customcolor-orange mt-14 text-white px-[3rem] py-5 w-[250px] rounded-lg font-bold">SAIBA
+            <button id="read-more" onclick="redirect()"
+                class="bg-customcolor-orange mt-14 text-white px-[3rem] py-5 w-[250px] rounded-lg font-bold">SAIBA
                 MAIS</button>
         </div>
     </section>
-    <section class="bg-[#545454] text-center py-5">
+    <section class="bg-[#545454] text-center p-6">
         <div class="max-w-2xl mx-auto">
             <i class="fas fa-hourglass w-12 h-12 text-[#C89116] mx-auto mb-4" style="font-size: 48px;"></i>
 
@@ -288,9 +325,10 @@
     <section class="bg-black text-center text-white">
         <div class="max-w-md mx-auto">
             <p class="text-lg mb-12 mt-20">POR APENAS 8x DE</p>
-            <h2 class="text-8xl font-bold my-2">R$ 28,65</h2>
+            <h2 id="custom-value" class="text-8xl font-bold my-2">R$ 28,65</h2>
             <p class="text-m mt-10 mb-12">OU À VISTA POR R$ 197,00</p>
-            <button class="bg-customcolor-orange mt-2 text-white w-[250px] px-[3.3rem] py-5 rounded-lg font-bold">SAIBA
+            <button id="read-more" onclick="redirect()"
+                class="bg-customcolor-orange mt-2 text-white w-[250px] px-[3.3rem] py-5 rounded-lg font-bold">SAIBA
                 MAIS</button>
             <div class="mt-6 flex justify-center space-x-4">
                 <img src="assets/images/icons/metodos_pagamentos.webp" alt="profile" width="300" height="300"
@@ -299,7 +337,7 @@
         </div>
         <div class="border-t-8 border-[#C89116] mt-10"></div>
     </section>
-    <section class="bg-[#545454] text-white text-center py-10 px-4">
+    <section class="bg-[#545454] text-white text-center py-10 px-4 p-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold mb-10 mt-10">Garantia Incondicional de 7 Dias – Sem Risco para Você!</h2>
             <p class="text-base mb-8">Nós acreditamos tanto no Protocolo 4EVER e nos resultados que ele pode trazer para
@@ -311,13 +349,15 @@
                 ou devolvemos seu dinheiro.</p>
             <p class="text-base mb-8">A decisão está nas suas mãos. Experimente o Protocolo 4EVER e descubra o método
                 que já transformou milhares de vidas!</p>
-            <button class="bg-customcolor-orange mt-2 mb-12 w-[250px] text-white px-[3.3rem] py-5 rounded-lg font-bold">SAIBA
+            <button id="read-more" onclick="redirect()"
+                class="bg-customcolor-orange mt-2 mb-12 w-[250px] text-white px-[3.3rem] py-5 rounded-lg font-bold">SAIBA
                 MAIS</button>
         </div>
     </section>
-    <section class="bg-[#0E0E0E]">
+    <section class="bg-[#0E0E0E] p-6">
         <section>
-            <div class="max-w-7xl p-24 mx-auto flex flex-col lg:flex-row bg-[#0E0E0E]" style="font-size: 16px;">
+            <div id="accordion" class="max-w-7xl p-24 mx-auto flex flex-col lg:flex-row bg-[#0E0E0E]"
+                style="font-size: 16px;">
                 <div class=" text-white flex flex-col  w-full lg:w-1/2">
                     <h2 class="text-4xl font-bold leading-tight mb-10">FAQ - Perguntas Frequentes</h2>
                 </div>
@@ -337,7 +377,6 @@
                                 quiser, sem limitações de tempo.</p>
                         </div>
                     </div>
-
                     <div class="mb-4 accordion-item">
                         <button
                             class="w-full flex justify-between items-center p-4 bg-neutral-900 text-white text-left font-medium accordion-button">
@@ -349,11 +388,11 @@
                             </svg>
                         </button>
                         <div class="p-4 bg-neutral-800 text-gray-200 hidden accordion-content">
-                            <p>Sim, o Protocolo 4EVER foi desenvolvido para atender pessoas de todos os níveis, incluindo
+                            <p>Sim, o Protocolo 4EVER foi desenvolvido para atender pessoas de todos os níveis,
+                                incluindo
                                 iniciantes. O conteúdo é apresentado de forma progressiva e didática.</p>
                         </div>
                     </div>
-
                     <div class="mb-4 accordion-item">
                         <button
                             class="w-full flex justify-between items-center p-4 bg-neutral-900 text-white text-left font-medium accordion-button">
@@ -369,7 +408,6 @@
                                 dúvidas diretamente com nossa equipe de especialistas.</p>
                         </div>
                     </div>
-
                     <div class="mb-4 accordion-item">
                         <button
                             class="w-full flex justify-between items-center p-4 bg-neutral-900 text-white text-left font-medium accordion-button">
@@ -381,11 +419,11 @@
                             </svg>
                         </button>
                         <div class="p-4 bg-neutral-800 text-gray-200 hidden accordion-content">
-                            <p>Sim, oferecemos garantia de satisfação de 30 dias. Se você não ficar satisfeito com o curso,
+                            <p>Sim, oferecemos garantia de satisfação de 30 dias. Se você não ficar satisfeito com o
+                                curso,
                                 pode solicitar reembolso integral dentro deste período.</p>
                         </div>
                     </div>
-
                     <div class="mb-4 accordion-item">
                         <button
                             class="w-full flex justify-between items-center p-4 bg-neutral-900 text-white text-left font-medium accordion-button">
@@ -397,11 +435,11 @@
                             </svg>
                         </button>
                         <div class="p-4 bg-neutral-800 text-gray-200 hidden accordion-content">
-                            <p>Não, o protocolo foi desenvolvido para ser acessível e não requer equipamentos especiais ou
+                            <p>Não, o protocolo foi desenvolvido para ser acessível e não requer equipamentos especiais
+                                ou
                                 de alto custo.</p>
                         </div>
                     </div>
-
                     <div class="mb-4 accordion-item">
                         <button
                             class="w-full flex justify-between items-center p-4 bg-neutral-900 text-white text-left font-medium accordion-button">
@@ -413,7 +451,8 @@
                             </svg>
                         </button>
                         <div class="p-4 bg-neutral-800 text-gray-200 hidden accordion-content">
-                            <p>Sim, você pode iniciar o protocolo quando for mais conveniente para você. O acesso é liberado
+                            <p>Sim, você pode iniciar o protocolo quando for mais conveniente para você. O acesso é
+                                liberado
                                 imediatamente após a compra.</p>
                         </div>
                     </div>
@@ -421,8 +460,8 @@
             </div>
         </section>
     </section>
-    <section >
-         <p class="text-center text-base py-11">
+    <section class="p-6">
+        <p class="text-center text-base py-11">
             <span class="text-white">COPYRIGHT ©</span><br>
             <span class="text-white">TODOS OS DIREITOS RESERVADOS.</span></span>
         </p>
@@ -432,4 +471,5 @@
     <script src="https://kit.fontawesome.com/6e54ed95d6.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
+
 </html>
