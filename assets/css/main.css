@@ -6,13 +6,6 @@
   background-color: #FF8400;
 }
 
-.profile-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 .custom-description-text {
     line-height: 2;
     white-space: pre-wrap;
@@ -50,10 +43,101 @@
     background-color: #3D3A36;
 }
 
+.logo-custom {
+   width: 350px;
+}
+
+@media (min-width: 500px) {
+    #custom-profile {
+       margin-right: 3.5rem !important;
+    }
+
+    .custom-span-description {
+        font-family: 'Nunito Sans', sans-serif; 
+        font-size: 18px;
+    }
+
+    #main-text {
+        font-size: 3.5rem !important;
+    }
+
+    .custom-main-description {
+        width: 100%;
+        padding: 40px 10px 40px 0px;
+        text-align: left;
+        display: inline;
+    }
+
+    #custom-value {
+        font-size: 5.5rem !important;
+        line-height: 1 !important;
+    }
+
+    #accordion {
+        padding: 2rem !important;
+    }
+
+    #cards { 
+        width: 90%;
+        margin: 10px auto;
+        padding: 25px;
+    }
+
+    #cards img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #cards p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    #cards span {
+        font-size: 16px;
+    }
+}
+
 @media (max-width: 500px) {
+    section {
+        padding: 4px !important;
+    }
+
+    .logo-custom {
+        width: 220px !important;
+    }
+
+    .custom-span-description {
+        font-family: 'Nunito Sans', sans-serif; 
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+    .custom-p-line {
+        line-height: 1.6;
+    }   
+
+    #main-text {
+        font-size: 2.5rem !important;
+    }
+
+    .custom-main-description {
+        width: 60% !important;
+        padding: 40px 10px 40px 0px !important;
+        text-align: left !important;
+        display: inline !important;
+    }	
+
     #custom-value {
         font-size: 3.75rem !important;
         line-height: 1 !important;
+    }
+
+    #custom-profile {
+       margin-right: 0rem !important;
     }
 
     #accordion {
